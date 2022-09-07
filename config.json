@@ -1,24 +1,24 @@
 {
     "user_id_list": [
-        "6074526225"
+        "2748597475"
     ],
     "filter": 0,
     "remove_html_tag": 1,
-    "since_date": 1,
+    "since_date": "2010-01-01",
     "start_page": 1,
     "write_mode": [
         "csv"
     ],
-    "original_pic_download": 1,
+    "original_pic_download": 0,
     "retweet_pic_download": 0,
-    "original_video_download": 1,
+    "original_video_download": 0,
     "retweet_video_download": 0,
-    "download_comment": 1,
+    "download_comment": 0,
     "comment_max_download_count": 100,
-    "download_repost": 1,
+    "download_repost": 0,
     "repost_max_download_count": 100,
     "result_dir_name": 0,
-    "cookie": "your cookie",
+    "cookie": "SCF=AjxHoYCU_d-O5UCQWINAWsXgfNbjftfNRhScoV1UdKC0uEDd8jl78_AeCCizixwJ9hEEvgR7OkM2QWLyTgp8jW4.; SUB=_2A25OEnDtDeRhGeFJ6VYQ9ivLzziIHXVt_RClrDV6PUNbktANLRnukW1NfHVttCykHCT2o8DeH17g3_hGQMCAb69_; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WW7KSzllH3jO8AGvxuD0UVg5JpX5KzhUgL.FoMNeoBpSo-NShB2dJLoIpjLxKqLBozL1-zLxK-LB-BLBKqLxK.L1K-LB.qt; SSOLoginState=1662386365; ALF=1664978365; _T_WM=79269453469; WEIBOCN_FROM=1110006030; MLOGIN=1; XSRF-TOKEN=fdc1e5; mweibo_short_token=49ca83eb16; M_WEIBOCN_PARAMS=luicode=20000174&uicode=10000011&fid=102803",
     "mysql_config": {
         "host": "localhost",
         "port": 3306,

@@ -107,7 +107,8 @@ def draw(path_pic, dt):
     plt.imshow(wc)
     plt.axis('off')
     plt.title(str(dt[0]))
-    plt.show()
+    # plt.show()
+    plt.savefig('./pic/'+str(dt[0])+'_cn.jpg')
 
 
 def trans(seg):
@@ -124,29 +125,46 @@ def trans(seg):
 
 if __name__ == '__main__':
 
+    # # 读取数据
+    # address = './weibo/中国青年网/2748597475.csv'
+    # data = read_csv(address)
+
+    # # 年份
+    # year = [i for i in range(2012, 2023)]
+    # # 按年份合并数据
+    # dt = merge_by_year(data, year)
+
+    # # 文本分词并去除stopwords
+    # stop_word = read_stopwords()
+    # dt = clean_text(dt, stop_word)
+
+    # # 关键词提取
+    # dt = extract_mainWord(dt)
+
+    # # 存储为csv
+    # name = ['year', 'mainwords']
+    # after = pd.DataFrame(columns=name, data=dt)
+    # after.to_csv('./after.csv', encoding='utf_8_sig')
+
+    # # 词云图
+    # path_pic = "./dependence/3.jpg"
+
+    # for i in range(len(dt)):
+    #     draw(path_pic, dt[i])
+
     # 读取数据
-    address = './weibo/中国青年网/2748597475.csv'
-    data = read_csv(address)
-
-    # 年份
-    year = [i for i in range(2012, 2023)]
-    # 按年份合并数据
-    dt = merge_by_year(data, year)
-
-    # 文本分词并去除stopwords
-    stop_word = read_stopwords()
-    dt = clean_text(dt, stop_word)
-
-    # 关键词提取
-    dt = extract_mainWord(dt)
-
-    # 存储为csv
-    name = ['year', 'mainwords']
-    after = pd.DataFrame(columns=name, data=dt)
-    after.to_csv('./after.csv', encoding='utf_8_sig')
+    address = './after.csv'
+    # data = pd.read_csv(address,
+    #                    error_bad_lines=False, usecols=['year', 'mainwords'], encoding='gb18030')
+    # # print(data.info())
+    data = pd.read_csv(address,
+                       error_bad_lines=False, usecols=['year', 'mainwords'])
+    t = np.array(data)
+    data = t.tolist()
+    print(data)
 
     # 词云图
     path_pic = "./dependence/3.jpg"
 
-    # for i in range(len(dt)):
-    #     draw(path_pic, dt[i])
+    for i in range(len(data)):
+        draw(path_pic, data[i])
